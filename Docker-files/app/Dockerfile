@@ -11,3 +11,7 @@ COPY --from=BUILD_IMAGE vprofile-project/target/vprofile-v2.war /usr/local/tomca
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
+
+#Mention the branch name in docker checkout command.
+#RUN cd vprofile-project && git checkout docker containers && mvn install
+#RUN cd vprofile-project && git checkout docker <BranchNameHere> && mvn install
